@@ -1,5 +1,5 @@
 # The Georgetown Experiment
-![img](images/nlp.jpeg)
+![img](images/nlp.jpg)
 This repository contains the code and resources related to the Georgetown Experiment, a seminal event in the history of machine translation. The Georgetown Experiment, conducted on January 7, 1954, was one of the first successful demonstrations of machine translation, where 60 Russian sentences were automatically translated into English using IBM's 701 computer.
 
 ## Table of Contents
