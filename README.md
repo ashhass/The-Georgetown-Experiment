@@ -31,6 +31,7 @@ Simulation Code: Python code that simulates the translation process used in the 
 `python program.py`
 
 ## License
+This project is licensed under the [MIT License](LICENSE)
 
 ## References
 [The first public demonstration of machine translation:
