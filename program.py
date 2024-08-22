@@ -13,12 +13,7 @@ class Rules:
     def __init__(self, sentence: str, glossary: dict[str, tuple[list[str], list[tuple[int, int, int]]]]) -> list:
         self.glossary = glossary
         self.output = []
-        self.sub_glossary = self._extract_sub_glossary()
         self.input = self._process_input(sentence)
-
-    def _extract_sub_glossary(self):
-        """Extracts sub-glossary entries that contain a hyphen."""
-        return {word: data for word, data in self.glossary.items() if '-' in word}
 
     def _process_input(self, sentence: str) -> list[str]:
         """Processes the input sentence into tokens."""
@@ -31,7 +26,7 @@ class Rules:
             for idx in range(len(word)):
                 prefix = word[:idx] + '-'
                 suffix = '-' + word[idx:]
-                if prefix in self.sub_glossary and suffix in self.sub_glossary:
+                if prefix in self.glossary and suffix in self.glossary:
                     inputs.extend([prefix, suffix])
                     break
 
@@ -49,7 +44,7 @@ class Rules:
 
     def find_word(self, idx):
         word = self.input[idx]
-        return self.glossary.get(word, self.sub_glossary.get(word))
+        return self.glossary.get(word)
         
     def apply_rules(self, pid, idx):
         switch = {
