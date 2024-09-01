@@ -29,6 +29,10 @@ Glossary: The vocabulary list used in the experiment, including both Russian and
 
 Simulation Code: Python code that simulates the translation process used in the Georgetown Experiment.
 
+## Demo
+![demo](https://github.com/user-attachments/assets/a7840aee-d8e4-48e5-b59f-de5f4fb1c20b)
+
+
 ## Usage
 `git clone https://github.com/ashhass/The-Georgetown-Experiment.git`
 
