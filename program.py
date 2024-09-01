@@ -28,7 +28,6 @@ class Rules:
                 suffix = '-' + word[idx:]
                 if prefix in self.glossary and suffix in self.glossary:
                     inputs.extend([prefix, suffix])
-                    break
 
         return inputs
 
@@ -50,13 +49,9 @@ class Rules:
         switch = {
             '110': self.rule1,
             '121': self.rule2,
-            '122': self.rule2,
             '131': self.rule3,
-            '132': self.rule3,
             '141': self.rule4,
-            '142': self.rule4,
             '151': self.rule5,
-            '152': self.rule5,
             '***': self.rule6
         }
         switch[pid](idx)
