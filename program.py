@@ -37,7 +37,7 @@ class Rules:
             word, codes = self.find_word(idx)
             pid, _, _ = codes if len(codes) == 3 else codes[0]
 
-            self.apply_rules(str(pid), idx)
+            self.apply_rules(pid, idx)
 
         return self.output
 
@@ -47,11 +47,11 @@ class Rules:
         
     def apply_rules(self, pid, idx):
         switch = {
-            '110': self.rule1,
-            '121': self.rule2,
-            '131': self.rule3,
-            '141': self.rule4,
-            '151': self.rule5,
+            110: self.rule1,
+            121: self.rule2,
+            131: self.rule3,
+            141: self.rule4,
+            151: self.rule5,
             '***': self.rule6
         }
         switch[pid](idx)
